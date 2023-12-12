@@ -8,12 +8,11 @@ const Hero = () => {
     <div className="hero">
       <div className='flex-1 items-center'>
         <div className='flex flex-col items-center justify-center lg:mb-20 ml-4'>
-        <h1 className='hero__title'>
-          Find the best candies in the world - quickly
-          and easily!
+        <h1 className='hero__title text-accent'>
+          - Find the best candies in the world -
         </h1>
-        <p className='hero__subtitle'>
-        each country offering unique and delicious options.
+        <p className='hero__subtitle text-accent'>
+        Each country offering unique and delicious options.
         </p>
         <Link
             href="/products/"

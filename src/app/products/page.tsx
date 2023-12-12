@@ -40,8 +40,8 @@ export default async function Products({searchParams: { page = "1" },
             priority
           />
           <div>
-            <h1 className='text-5xl font-bold'>{products[0].name}</h1>
-            <p className='py-6'>{products[0].description}</p>
+            <h1 className='text-5xl font-bold text-accent'>{products[0].name}</h1>
+            <p className='py-6 text-accent'>{products[0].description}</p>
             <Link
             href={"/products/" + products[0].id}
             className='btn-success btn'>CHECK IT OUT

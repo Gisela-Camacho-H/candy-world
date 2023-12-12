@@ -12,7 +12,7 @@ export default async function name() {
     const cart = await getCart();
     return(
         <div>
-            <h1 className="my-6 text-2xl font-bold text-primary">Shopping Cart</h1>
+            <h1 className="my-6 text-center text-2xl font-bold text-warning">Shopping Cart</h1>
             {cart?.items.map((cartItem) => (
                 <CartEntry 
                 cartItem={cartItem} 
@@ -25,7 +25,7 @@ export default async function name() {
                 <p className="mb-3 font-bold">
                     Total: {formatPrice(cart?.subtotal || 0)}
                 </p>
-                <button className="btn btn-primary sm:w-[200px]">Checkout</button>
+                <button className="btn btn-success sm:w-[200px]">Checkout</button>
             </div>
         </div>
     )
