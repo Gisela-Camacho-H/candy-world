@@ -44,7 +44,7 @@ export default async function Products({searchParams: { page = "1" },
             <p className='py-6'>{products[0].description}</p>
             <Link
             href={"/products/" + products[0].id}
-            className='btn-primary btn'>CHECK IT OUT
+            className='btn-success btn'>CHECK IT OUT
             </Link>
           </div>
         </div>

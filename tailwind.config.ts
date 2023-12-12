@@ -10,20 +10,21 @@ const config: Config = {
   daisyui: {
     themes: [
       {
-        mytheme: {        
+        mytheme: {
+          
           "primary": "#00a398",       
-          "secondary": "#7dd3fc",     
-          "accent": "#a78bfa",          
-          "neutral": "#123432",         
-          "base-100": "#0f3037",
-          "info": "#d6d3d1",
-          "success": "#6ee7b7",
-          "warning": "#ecfccb",
-          "error": "#f87171",
-        },
-      },
-    ],
-  },
+          "secondary": "#EBC3B6",                   
+          "accent": "#f5FBEF",                   
+          "neutral": "#654469",                   
+          "base-100": "#413740",                   
+          "info": "#7dd3fc",                   
+          "success": "#6ee7b7",                   
+          "warning": "#ecfccb",                   
+          "error": "#f4989c",
+                   },
+                 },
+               ],
+             },
   plugins: [require("daisyui")],
 };
 export default config;

@@ -23,13 +23,13 @@ export default function ProductCard({product}: ProductCardProps) {
                     alt={product.name}
                     width={400}
                     height={200}
-                    className="h-48 object-cover"
+                    className="h-48 object-cover px-8"
                 />
             </figure>
             <div className="card-body">
-                <h2 className="card-title text-primary">{product.name}
+                <h2 className="card-title text-neutral font-extrabold">{product.name}
                 </h2>
-                {isNew && <div className="badge badge-secondary">NEW</div>}
+                {isNew && <div className="badge badge-success">NEW</div>}
                 <p className="text-black">{product.description}</p>
                 <PriceTag price={product.price} className={""}></PriceTag>
                 {product.country == "Japan" &&
@@ -39,7 +39,7 @@ export default function ProductCard({product}: ProductCardProps) {
                             alt="Japan"
                             width={50}
                             height={30}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "Mexico" &&
@@ -49,7 +49,7 @@ export default function ProductCard({product}: ProductCardProps) {
                             alt="Mexico"
                             width={50}
                             height={30}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "France" &&
@@ -59,7 +59,7 @@ export default function ProductCard({product}: ProductCardProps) {
                             alt="France"
                             width={50}
                             height={30}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "Korea" &&
@@ -69,7 +69,7 @@ export default function ProductCard({product}: ProductCardProps) {
                             alt="Korea"
                             width={50}
                             height={30}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "Philippines" &&
@@ -79,7 +79,7 @@ export default function ProductCard({product}: ProductCardProps) {
                             alt="Philippines"
                             width={50}
                             height={30}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 </div>

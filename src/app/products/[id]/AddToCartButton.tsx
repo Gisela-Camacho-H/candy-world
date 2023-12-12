@@ -15,7 +15,7 @@ export default function AddToCartButton({productId}: AddToCartButtonProps) {
     return(
         <div>
             <button 
-            className="btn btn-primary my-6"
+            className="btn btn-success my-12"
             onClick={() => {
                 setSuccess(false);
                 startTransition(async () => {

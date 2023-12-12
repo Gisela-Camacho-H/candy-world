@@ -17,7 +17,7 @@ const Hero = () => {
         </p>
         <Link
             href="/products/"
-            className='btn-primary text-white btn mt-4 lg:mt-20'>Expore Our Candies
+            className='btn-success btn mt-4 lg:mt-20'>Expore Our Candies
         </Link>
         </div>
       </div>

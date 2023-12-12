@@ -44,13 +44,13 @@ export default async function ProductPage(
             alt={product.name}
             width={500}
             height={500}
-            className="rounded-lg p-10"
+            className="rounded-lg"
             priority
             />
-            <div className="bg-cyan-900 rounded-2xl p-10 lg:my-6 lg:mr-24">
-                <h1 className="lg:text-5xl  text-4xl font-bold m-4 lg:m-4">{product.name}</h1>
-                <PriceTag price={product.price} className="mt-2" />
-                <p className="py-6 mt-2 lg:text-xl">{product.description}</p>
+            <div className="rounded-2xl p-10 lg:my-6 lg:mr-4">
+                <h1 className="lg:text-5xl text-4xl font-bold m-4 lg:my-8">{product.name}</h1>
+                <PriceTag price={product.price} className="mt-4 bg-accent text-black" />
+                <p className="py-12 mt-2 lg:text-xl">{product.description}</p>
                 {product.country == "Japan" &&
                     <div className="my-2">
                         <Image 
@@ -58,7 +58,7 @@ export default async function ProductPage(
                             alt="Japan"
                             width={100}
                             height={60}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "Mexico" &&
@@ -68,7 +68,7 @@ export default async function ProductPage(
                             alt="Mexico"
                             width={100}
                             height={60}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "France" &&
@@ -78,7 +78,7 @@ export default async function ProductPage(
                             alt="France"
                             width={100}
                             height={60}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "Korea" &&
@@ -88,7 +88,7 @@ export default async function ProductPage(
                             alt="Korea"
                             width={100}
                             height={60}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 {product.country == "Philippines" &&
@@ -98,7 +98,7 @@ export default async function ProductPage(
                             alt="Philippines"
                             width={100}
                             height={60}
-                            className="bordered border-primary border-2"/>
+                            className="bordered border-gray-200 border-2"/>
                     </div>
                 }
                 <AddToCartButton 
