@@ -1,34 +1,37 @@
 import FormSubmitButton from "@/components/FormSubmitButton";
+import { prisma } from "@/lib/db/prisma";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import { authOptions } from "../api/auth/[...nextauth]/route";
-import { prisma } from "@/lib/db/prisma";
 
 export const metadata = {
-    title: "Add Product - Candy World"
-}
+  title: "Add Product - Flowmazon",
+};
 
-async function addProducts(formData: FormData){
-"use server";
+async function addProduct(formData: FormData) {
+  "use server";
 
-const session = await getServerSession(authOptions);
-if (!session) {
+  const session = await getServerSession(authOptions);
+
+  if (!session) {
     redirect("/api/auth/signin?callbackUrl=/add-product");
   }
-const name = formData.get("name")?.toString();
-const description = formData.get("description")?.toString();
-const imageUrl = formData.get("imageUrl")?.toString();
-const price = Number(formData.get("price") || 0);
-const country = formData.get("country")?.toString();
 
-if (!name || !description || !imageUrl || !price || !country) {
-    throw Error("Missing required fields")
-}
+  const name = formData.get("name")?.toString();
+  const description = formData.get("description")?.toString();
+  const imageUrl = formData.get("imageUrl")?.toString();
+  const price = Number(formData.get("price") || 0);
+  const country = formData.get("country")?.toString(); 
 
-await prisma.product.create({
-    data: {name, description, price, country, imageUrl}
-})
-redirect("/products");
+  if (!name || !description || !imageUrl || !price || !country) {
+    throw Error("Missing required fields");
+  }
+
+  await prisma.product.create({
+    data: { name, description, imageUrl, price, country },
+  });
+
+  redirect("/");
 }
 
 export default async function AddProductPage() {
@@ -42,7 +45,7 @@ export default async function AddProductPage() {
     return(
         <div>
             <h1 className="text-2xl text-primary mb-3 font-bold text-center lg:pt-10">Add Product</h1>
-            <form  className="md:mx-56 xl:mx-60" action={addProducts}>
+            <form  className="md:mx-56 xl:mx-60" action={addProduct}>
                 <input
                 required
                 name="name"
