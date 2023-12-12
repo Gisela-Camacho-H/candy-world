@@ -1,5 +1,4 @@
 import NotFoundPage from "@/app/not.found"
-import prisma from "@/lib/db/prisma"
 import { notFound } from "next/navigation"
 import Image from "next/image"
 import PriceTag from "@/components/priceTag"
@@ -7,6 +6,7 @@ import { cache } from "react"
 import { Metadata } from "next"
 import AddToCartButton from "./AddToCartButton"
 import { incrementProductQuantity } from "./actions"
+import { prisma } from "@/lib/db/prisma"
 
 interface ProductPagaProps {
     params: {
