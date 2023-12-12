@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hero {
-  @apply flex xl:flex-row flex-col gap-4 relative z-0 max-h-[500px] max-w-[1500px] lg:py-14 lg:my-36 ;
+  @apply flex xl:flex-row flex-col gap-4 relative z-0 max-h-[500px] max-w-[1500px] xl:py-14 xl:my-36;
 }
 
 .hero__title {

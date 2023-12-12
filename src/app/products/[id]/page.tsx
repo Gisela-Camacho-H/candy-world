@@ -49,7 +49,7 @@ export default async function ProductPage(
             />
             <div className="rounded-2xl p-10 lg:my-6 lg:mr-4">
                 <h1 className="lg:text-5xl text-4xl font-bold m-4 lg:my-8">{product.name}</h1>
-                <PriceTag price={product.price} className="mt-4 bg-accent text-black" />
+                <PriceTag price={product.price} className="mt-4 bg-warning text-black" />
                 <p className="py-12 mt-2 lg:text-xl">{product.description}</p>
                 {product.country == "Japan" &&
                     <div className="my-2">

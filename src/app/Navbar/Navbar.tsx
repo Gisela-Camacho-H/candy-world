@@ -37,7 +37,7 @@ export default async function Navbar() {
                 <div className="flex flex-3 gap-16 mx-10">
                     <Link href="/products">Products
                     </Link>
-                    <Link href="/">About Us
+                    <Link href="/about-us">About Us
                     </Link>
                     <Link href="/">Profile
                     </Link>
