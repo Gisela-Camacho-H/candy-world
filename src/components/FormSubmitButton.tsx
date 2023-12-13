@@ -13,7 +13,7 @@ export default function FormSubmitButton({children, className, ...props} : FormS
     return(
         <button
         {...props}
-        className={`btn btn-primary ${className}`}
+        className={`btn btn-success ${className}`}
         type="submit"
         disabled={pending}
         >

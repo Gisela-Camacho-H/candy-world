@@ -44,7 +44,7 @@ export default async function AddProductPage() {
 
     return(
         <div>
-            <h1 className="text-2xl text-primary mb-3 font-bold text-center lg:pt-10">Add Product</h1>
+            <h1 className="text-2xl text-accent mb-3 font-bold text-center lg:pt-10">Add Product</h1>
             <form  className="md:mx-56 xl:mx-60" action={addProduct}>
                 <input
                 required
