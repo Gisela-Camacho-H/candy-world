@@ -38,19 +38,19 @@ export default async function CountryPage(
             <Image 
             src={country.flag}
             alt={country.name}
-            width={500}
-            height={500}
+            width={1000}
+            height={1000}
             className="rounded-lg"
             priority
             />
             <div className="rounded-2xl p-4 lg:mr-4">
                 <h1 className="lg:text-5xl text-4xl text-warning font-bold text-center lg:my-10">{country.name}</h1>
-                <p className="xl:py-8 py-4 mt-2 lg:text-xl">{country.description}</p>
-                <p className="xl:py-6 py-2 mt-2 lg:text-xl"> Area: {country.area}</p>
-                <p className="xl:py-6 py-2 mt-2 lg:text-xl"> Capital: {country.capital}</p>
-                <p className="xl:py-6 py-2 mt-2 lg:text-xl"> Location: {country.location}</p>
-                <p className="xl:py-6 py-2 mt-2 lg:text-xl"> Official Language: {country.offLanguage}</p>
-                <p className="xl:py-6 py-2 mt-2 lg:text-xl"> Population: {country.population}</p>
+                <p className="py-4 mt-2 lg:text-xl">{country.description}</p>
+                <p className="py-2 mt-2 lg:text-xl"> Area: {country.area}</p>
+                <p className="py-2 mt-2 lg:text-xl"> Capital: {country.capital}</p>
+                <p className="py-2 mt-2 lg:text-xl"> Location: {country.location}</p>
+                <p className="py-2 mt-2 lg:text-xl"> Official Language: {country.offLanguage}</p>
+                <p className="py-2 mt-2 lg:text-xl"> Population: {country.population}</p>
             </div>
         </div>
     );
