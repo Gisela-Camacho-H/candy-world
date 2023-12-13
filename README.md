@@ -1,3 +1,6 @@
+
+<h1 align="center">Candies Around the World</h1>
+
 <h3 align="center">This web site will sell traditional candies of different countries that are not common in different places, this will let the users to sort by country and select the candies according with the type of candies.</h3>
 
 - 💬 Vercel [https://candy-world-gisela-camachos-projects.vercel.app/](https://candy-world-gisela-camachos-projects.vercel.app/)
