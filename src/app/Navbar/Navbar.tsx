@@ -30,7 +30,7 @@ export default async function Navbar() {
 
     return (
         <div className="bg-base-100">
-            <div className="navbar max-w-full flex-col md:flex-row xs:flex-row lg:gap-56 gap-12 md:gap-56 lg:px-10">
+            <div className="navbar max-w-[1300px] flex-col md:flex-row xs:flex-row lg:gap-60 gap-4 md:gap-56 lg:px-10">
                 <div className="flex-1 mr-4">
                     <Link href="/" className="btn btn-ghost text-xl normal-case">
                         <Image
@@ -40,27 +40,24 @@ export default async function Navbar() {
                             
                     </Link>
                 </div>
-                <div className="flex flex-3 gap-16 mx-10">
-                    <Link href="/products">Products
-                    </Link>
-                    <Link href="/about-us">About Us
-                    </Link>
-                    <Link href="/countries">Countries
-                    </Link>
+                <div className="navbar-center lg:flex">
+                <ul className="menu menu-horizontal px-1 font-bold text-lg">
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/countries">Countries</a></li>
                     {user ? (
-                        <Link href="/add-product">Add Product
-                        </Link>
+                        <li><a href="/add-product">Add Product</a></li>
                         ) : (
-                        null
+                        <li><a href="/about-us">About Us</a></li>
                     )}
+                </ul>
                 </div>
-                <div className="flex-none gap-2">
+                <div className="flex-none">
                     <form action={searchProducts}>
                         <div className="form-control">
                             <input 
                                 name="searchQuery"
                                 placeholder="Search"
-                                className="input input-bordered w-full min-x-[100px]"
+                                className="input input-bordered w-full min-x-[80px]"
                             />
                         </div>
                     </form>
