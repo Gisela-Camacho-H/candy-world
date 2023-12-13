@@ -20,6 +20,20 @@ model Product {
   CartItem    CartItem[]
 }
 
+model Country {
+  id          String        @id @default(auto()) @map("_id") @db.ObjectId
+  name        String
+  description String?
+  location    String
+  area        String
+  population  String
+  flag        String
+  capital     String
+  offLanguage String
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+}
+
 model Cart {
   id        String    @id @default(auto()) @map("_id") @db.ObjectId
   items     CartItem[] 
